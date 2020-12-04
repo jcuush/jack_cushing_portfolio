@@ -109,29 +109,17 @@ class Contact extends React.Component {
                           <br />
                           Simply fill the from and send me an email.
                         </p>
-                        {/* <!-- <ul class="list-ico">
-                                <li><span class="ion-ios-location"></span> 329 WASHINGTON ST BOSTON, MA 02108</li>
-                                <li><span class="ion-ios-telephone"></span> (617) 557-0089</li>
-                                <li><span class="ion-email"></span> contact@example.com</li>
-                                </ul> --> */}
+                        <ul class="list-ico">
+                                <li><span class="ion-ios-telephone"></span> (708) 860-8583</li>
+                                <li><span class="ion-email"></span> jrcushing@sbcglobal.net</li>
+                                </ul>
                       </div>
                       <div className="socials">
                         <ul>
                           <li>
                             <a
-                              href=""
-                              target="_blank"
-                              rel="noopener noreferrer"
-                            >
-                              <span className="ico-circle">
-                                <i className="ion-social-codepen"></i>
-                              </span>
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              href=""
-                              target="_blank"
+                              href="https://github.com/jcuush"
+                              target="https://github.com/jcuush"
                               rel="noopener noreferrer"
                             >
                               <span className="ico-circle">
@@ -141,8 +129,8 @@ class Contact extends React.Component {
                           </li>
                           <li>
                             <a
-                              href=""
-                              target="_blank"
+                              href="https://www.linkedin.com/in/jack-cushing-50804a139/"
+                              target="https://www.linkedin.com/in/jack-cushing-50804a139/"
                               rel="noopener noreferrer"
                             >
                               <span className="ico-circle">
