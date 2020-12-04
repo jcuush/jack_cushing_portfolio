@@ -1,29 +1,20 @@
-// Dependencies
-const express = require('express');
-const routes = require('./routes');
+const express = require("express");
+const path = require("path");
 
-// Express instance
+const PORT = process.env.PORT || 3001;
 const app = express();
 
-// Variable Port
-const PORT = process.env.PORT || 9001;
+// Serve up static assets (usually on heroku)
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("client/build"));
+}
 
-// Middleware
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
+// Send every request to the React app
+// Define any API routes before this runs
+app.get("*", function(req, res) {
+  res.sendFile(path.join(__dirname, "./client/build/index.html"));
+});
 
-
-if (process.env.NODE_ENV === 'production') {
-
-    app.use(express.static('client/build'))
-};
-
-// API and View Routes
-app.use(routes);
-
-// Start the server
-app.listen(PORT, () => {
-    if (process.env.NODE_ENV !== 'production') {
-        console.log(`Server listening at http://localhost:${PORT}`)
-    };
+app.listen(PORT, function() {
+  console.log(`🌎 ==> API server now on port ${PORT}!`);
 });
